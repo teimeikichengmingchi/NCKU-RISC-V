@@ -16,7 +16,8 @@ int removeDuplicates(int* nums, int numSize){
     for(int i = 1; i < numSize; i++){
         if(nums[i] == nums[i - 1])
             shift++;
-        nums[i - shift] = nums[i];
+        else
+            nums[i - shift] = nums[i];
     }
     return numSize - shift;
 }
