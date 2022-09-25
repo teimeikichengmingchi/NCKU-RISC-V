@@ -52,8 +52,8 @@ nums3:      .word -1
             .word 11
             .word 11
 
-space:      .word ' '
-newline:    .word '\n'
+space:      .word 32
+newline:    .word 10
 
 .text
 # start main function here
