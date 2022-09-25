@@ -134,7 +134,7 @@ printLoop:
     addi t1, t1, 4              # go to next element in array
     j printLoop
 printLoopEnd:
-    la a0, newLine
+    la a0, newline
     lw a0, 0(a0)
     addi a7, zero, 11
     ecall
