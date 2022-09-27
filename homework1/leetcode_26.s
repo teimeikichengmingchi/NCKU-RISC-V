@@ -52,8 +52,8 @@ nums3:      .word -1
             .word 11
             .word 11
 
-space:      .word 32
-newline:    .word 10
+space:      .byte 32
+newline:    .byte 10
 
 .text
 # start main function here
@@ -126,7 +126,7 @@ printLoop:
     ecall
     
     la a0, space
-    lw a0, 0(a0)                # load the ascii value of ' ' in address of space
+    lbu a0, 0(a0)                # load the ascii value of ' ' in address of space
     addi a7, zero, 11
     ecall
     
@@ -135,7 +135,7 @@ printLoop:
     j printLoop
 printLoopEnd:
     la a0, newline
-    lw a0, 0(a0)
+    lbu a0, 0(a0)
     addi a7, zero, 11
     ecall
     jr ra
